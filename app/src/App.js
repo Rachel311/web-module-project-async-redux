@@ -13,11 +13,11 @@ const App = ({ films, isFetching, error, ...props }) => {
 
   return (
     <div className="App">
-      <h1>Studio Ghibli Films: </h1>
+      <h1> Films: </h1>
       <p>{films}</p>
       <p>{error}</p>
       <button onClick={handleGetFilms} >Fetch Films</button>
-      <h1>Studio Ghibli Films List: </h1>
+      <h1>Films List: </h1>
       {films === null ? error : <FilmList />}
       {isFetching === true ? <p className="fetching">Fetching Films</p> : error}
       <button onClick={handleGetFilms} >Fetch 20 Films</button>
